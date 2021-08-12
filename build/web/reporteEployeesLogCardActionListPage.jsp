@@ -23,18 +23,10 @@
             <div class="row mt-5 mb-5" id="no-principal">
                 <div class="col col-md-2">&nbsp;</div>
                 <div class="col col-md-8">
-                    <form action="">
-                        <div class="form-group">
-                            Inicio<input type="date" class="form-control">
-                            Fim<input type="date" class="form-control">
-                        </div>
-                    </form>
-                    <form action="RelatorioController">
-                        <div class="form-group">
-                            <input type="hidden" name="idEmployee" value="${lista.get(0).idEmployee.idEmployee}">
-                            <input type="submit" class="btn btn-primary" value="Gerar Relatório">
-                        </div>
-                    </form>
+                    <%
+                        response.setContentType("application/vmd.ms-excel");
+                        response.setHeader("Content-Disposition", "inline;filename=employee.xls");
+                    %>
                     <%@include file="tableLogCardActionWidget.jsp" %>
                 </div>
             </div>

@@ -29,12 +29,9 @@
                             Fim<input type="date" class="form-control">
                         </div>
                     </form>
-                    <form action="">
+                    <form action="RelatorioController">
                         <div class="form-group">
-                            <select class="form-group">
-                                <option>PDF</option>
-                                <option>XLS</option>
-                            </select>
+                            <input type="hidden" name="idEmployee" value="${lista.get(0).idEmployee.idEmployee}">
                             <input type="submit" class="btn btn-primary" value="Gerar Relatório">
                         </div>
                     </form>

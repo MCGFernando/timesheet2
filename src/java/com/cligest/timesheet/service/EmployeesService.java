@@ -9,18 +9,22 @@ import com.cligest.timesheet.dao.EmployeesDAO;
 import com.cligest.timesheet.domain.Employees;
 import java.util.List;
 
+
 /**
  *
  * @author maro.fernando
  */
 public class EmployeesService {
-    public Employees pesquisaPorID(Integer id){
+
+    public Employees pesquisaPorID(Integer id) {
         EmployeesDAO dao = new EmployeesDAO();
         return dao.findById(id);
     }
-    
-    public List<Employees> pesquisaTudo(){
+
+    public List<Employees> pesquisaTudo() {
         EmployeesDAO dao = new EmployeesDAO();
         return dao.findAll();
     }
+
+    
 }
